@@ -9,11 +9,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  
+
   List<Card> _tarjetas(int count) {
-    List<Card> cards = List.generate(
+
+   print(count);
+    List<Card> cards = List.generate(     
         count,
         (int index) => Card(
+             
               clipBehavior: Clip.antiAlias,
               child: InkWell(
                 onTap: () {
@@ -26,6 +29,12 @@ class _HomePageState extends State<HomePage> {
                       break;
                     case 2:
                       Navigator.pushNamed(context, 'prueba3');
+                      break;
+                    case 3:
+                      Navigator.pushNamed(context, 'prueba4');
+                      break;
+                    case 4:
+                      Navigator.pushNamed(context, 'prueba5');
                       break;
                     default:
                   }      
@@ -43,12 +52,12 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text('Prueba $index',
+                              Text(_nombre(index),
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18)),
                               SizedBox(height: 8.0),
-                              Text('Desarrollo en Flutter')
+                              Text('Prueba Flutter')
                             ]))
                   ],
                 ),
@@ -57,6 +66,33 @@ class _HomePageState extends State<HomePage> {
 
     return cards;
   }
+
+
+  _nombre(valor){
+    
+  var titulo = "";
+  switch(valor) { 
+      case 0: {  titulo = "Lista Infinita";  } 
+      break; 
+     
+      case 1: { titulo = "Incrementar"; } 
+      break; 
+     
+      case 2: { titulo = "Stack"; } 
+      break; 
+     
+      case 3: {  titulo = "Animated"; } 
+      break; 
+
+      case 4: {  titulo = "CrossFade"; } 
+      break;
+     
+      default: { titulo = "Próximamente"; } 
+      break; 
+   } 
+     return titulo;
+  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -88,14 +124,14 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-                icon: Icon(Icons.account_balance_wallet),
-                title: Text('Prueba 1')),
+                icon: Icon(Icons.list_alt),
+                title: Text('Lista')),
             BottomNavigationBarItem(
-                icon: Icon(Icons.account_balance_wallet),
-                title: Text('Prueba 2')),
+                icon: Icon(Icons.plus_one_rounded),
+                title: Text('Incrementar')),
             BottomNavigationBarItem(
-                icon: Icon(Icons.account_balance_wallet),
-                title: Text('Prueba 3'))
+                icon: Icon(Icons.add_to_photos),
+                title: Text('Stack'))
           ],
           onTap: _links,
         ));
@@ -111,6 +147,9 @@ class _HomePageState extends State<HomePage> {
         break;
       case 2:
         Navigator.pushNamed(context, 'prueba3');
+        break;
+      case 3:
+        Navigator.pushNamed(context, 'prueba4');
         break;
       default:
     }

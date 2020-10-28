@@ -5,6 +5,8 @@ import 'package:pruebas_flutter/page/home.dart';
 import 'package:pruebas_flutter/page/prueba1.dart';
 import 'package:pruebas_flutter/page/prueba2.dart';
 import 'package:pruebas_flutter/page/prueba3.dart';
+import 'package:pruebas_flutter/page/prueba4.dart';
+import 'package:pruebas_flutter/page/prueba5.dart';
 
 
 void main() => runApp(MyApp());
@@ -25,7 +27,9 @@ class MyApp extends StatelessWidget {
          'home' : (BuildContext contex) => HomePage(),
          'prueba1' : (BuildContext contex) => RandomWords(),
          'prueba2' : (BuildContext contex) => PruebaDos(),
-         'prueba3' : (BuildContext contex) => PruebaTres()
+         'prueba3' : (BuildContext contex) => PruebaTres(),
+         'prueba4' : (BuildContext contex) => PruebaCuatro(),
+         'prueba5' : (BuildContext contex) => PruebaCinco()
        },
     );
   }
