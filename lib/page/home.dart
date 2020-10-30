@@ -36,6 +36,12 @@ class _HomePageState extends State<HomePage> {
                     case 4:
                       Navigator.pushNamed(context, 'prueba5');
                       break;
+                    case 5:
+                      Navigator.pushNamed(context, 'prueba6');
+                      break;
+                    case 6:
+                      Navigator.pushNamed(context, 'prueba7');
+                      break;
                     default:
                   }      
                 },
@@ -86,6 +92,12 @@ class _HomePageState extends State<HomePage> {
 
       case 4: {  titulo = "CrossFade"; } 
       break;
+
+      case 5: {  titulo = "Hero"; } 
+      break;
+
+      case 6: {  titulo = "AnimaBuilder"; } 
+      break;
      
       default: { titulo = "Próximamente"; } 
       break; 
@@ -106,7 +118,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 print('Presionó Menu');
               }),
-          title: Text('Flutter Lab'),
+          title: Text('Catálogo Widgets'),
           actions: [
             IconButton(
                 icon: Icon(Icons.search, semanticLabel: 'Buscar Ejemplo'),
@@ -160,6 +172,6 @@ class _HomePageState extends State<HomePage> {
         crossAxisCount: 2,
         padding: EdgeInsets.all(16.0),
         childAspectRatio: 8.0 / 9.0,
-        children: _tarjetas(6));
+        children: _tarjetas(12));
   }
 }
