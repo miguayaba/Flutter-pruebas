@@ -16,7 +16,9 @@ class _HomePageState extends State<HomePage> {
     List<Card> cards = List.generate(     
         count,
         (int index) => Card(
-             
+             shape: RoundedRectangleBorder(
+               borderRadius:BorderRadius.circular(15.0) 
+              ),
               clipBehavior: Clip.antiAlias,
               child: InkWell(
                 onTap: () {
@@ -42,6 +44,9 @@ class _HomePageState extends State<HomePage> {
                     case 6:
                       Navigator.pushNamed(context, 'prueba7');
                       break;
+                    case 7:
+                      Navigator.pushNamed(context, 'prueba8');
+                      break;
                     default:
                   }      
                 },
@@ -61,14 +66,16 @@ class _HomePageState extends State<HomePage> {
                               Text(_nombre(index),
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 18)),
+                                      fontSize: 18)
+                                  ),
                               SizedBox(height: 8.0),
                               Text('Prueba Flutter')
                             ]))
                   ],
                 ),
               ),
-            ));
+            )
+            );
 
     return cards;
   }
@@ -77,8 +84,9 @@ class _HomePageState extends State<HomePage> {
   _nombre(valor){
     
   var titulo = "";
+
   switch(valor) { 
-      case 0: {  titulo = "Lista Infinita";  } 
+      case 0: {  titulo = "Lista Infinita"; } 
       break; 
      
       case 1: { titulo = "Incrementar"; } 
@@ -98,8 +106,12 @@ class _HomePageState extends State<HomePage> {
 
       case 6: {  titulo = "AnimaBuilder"; } 
       break;
+
+      case 7: {  titulo = "DecoratedBox"; } 
+      break;
+
      
-      default: { titulo = "Próximamente"; } 
+      default: { titulo = "Proximamente"; } 
       break; 
    } 
      return titulo;

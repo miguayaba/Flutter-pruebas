@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 
 
+
+//Paginas del APP
+import 'package:pruebas_flutter/page/splash.dart';
 import 'package:pruebas_flutter/page/home.dart';
-import 'package:pruebas_flutter/page/prueba1.dart';
-import 'package:pruebas_flutter/page/prueba2.dart';
-import 'package:pruebas_flutter/page/prueba3.dart';
-import 'package:pruebas_flutter/page/prueba4.dart';
-import 'package:pruebas_flutter/page/prueba5.dart';
-import 'package:pruebas_flutter/page/prueba6.dart';
-import 'package:pruebas_flutter/page/prueba6a.dart';
-import 'package:pruebas_flutter/page/prueba7.dart';
+import 'package:pruebas_flutter/page/layout/prueba1.dart';
+import 'package:pruebas_flutter/page/varios/prueba2.dart';
+import 'package:pruebas_flutter/page/layout/prueba3.dart';
+import 'package:pruebas_flutter/page/animacion/prueba4.dart';
+import 'package:pruebas_flutter/page/animacion/prueba5.dart';
+import 'package:pruebas_flutter/page/animacion/prueba6.dart';
+import 'package:pruebas_flutter/page/animacion/prueba6a.dart';
+import 'package:pruebas_flutter/page/animacion/prueba7.dart';
+import 'package:pruebas_flutter/page/animacion/prueba8.dart';
+
 
 
 void main() => runApp(MyApp());
@@ -25,8 +30,9 @@ class MyApp extends StatelessWidget {
        theme: _colorApp(), 
        debugShowCheckedModeBanner :false,           
        home: HomePage(),
-       initialRoute: 'home',
+       initialRoute: 'splash',
        routes: {
+         'splash' : (BuildContext contex) => SplashScreen(),
          'home' : (BuildContext contex) => HomePage(),
          'prueba1' : (BuildContext contex) => RandomWords(),
          'prueba2' : (BuildContext contex) => PruebaDos(),
@@ -36,6 +42,7 @@ class MyApp extends StatelessWidget {
          'prueba6' : (BuildContext contex) => PruebaSeis(),
          'prueba6a' : (BuildContext contex) => PruebaSeisa(),
          'prueba7' : (BuildContext contex) => PruebaSiete(),
+         'prueba8' : (BuildContext contex) => PruebaOcho(),
 
        },
     );
