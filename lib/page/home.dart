@@ -149,13 +149,13 @@ class _HomePageState extends State<HomePage> {
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(Icons.list_alt),
-                title: Text('Lista')),
+                label: 'Lista'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.plus_one_rounded),
-                title: Text('Incrementar')),
+                label: 'Incrementar'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.add_to_photos),
-                title: Text('Stack'))
+                label: 'Stack')
           ],
           onTap: _links,
         ));
@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
     return GridView.count(
         crossAxisCount: 2,
         padding: EdgeInsets.all(16.0),
-        childAspectRatio: 8.0 / 9.0,
+        childAspectRatio: 8.0 / 8.5,
         children: _tarjetas(12));
   }
 }
