@@ -47,6 +47,9 @@ class _HomePageState extends State<HomePage> {
                     case 7:
                       Navigator.pushNamed(context, 'prueba8');
                       break;
+                    case 8:
+                      Navigator.pushNamed(context, 'prueba9');
+                      break;
                     default:
                   }      
                 },
@@ -108,6 +111,9 @@ class _HomePageState extends State<HomePage> {
       break;
 
       case 7: {  titulo = "DecoratedBox"; } 
+      break;
+
+      case 8: {  titulo = "FadeTransition"; } 
       break;
 
      

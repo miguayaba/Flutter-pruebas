@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 //Paginas del APP
 import 'package:pruebas_flutter/page/splash.dart';
 import 'package:pruebas_flutter/page/home.dart';
@@ -14,7 +12,7 @@ import 'package:pruebas_flutter/page/animacion/prueba6.dart';
 import 'package:pruebas_flutter/page/animacion/prueba6a.dart';
 import 'package:pruebas_flutter/page/animacion/prueba7.dart';
 import 'package:pruebas_flutter/page/animacion/prueba8.dart';
-
+import 'package:pruebas_flutter/page/animacion/prueba9.dart';
 
 
 void main() => runApp(MyApp());
@@ -43,6 +41,7 @@ class MyApp extends StatelessWidget {
          'prueba6a' : (BuildContext contex) => PruebaSeisa(),
          'prueba7' : (BuildContext contex) => PruebaSiete(),
          'prueba8' : (BuildContext contex) => PruebaOcho(),
+         'prueba9' : (BuildContext contex) => PruebaNueve(),
 
        },
     );
