@@ -50,6 +50,9 @@ class _HomePageState extends State<HomePage> {
                     case 8:
                       Navigator.pushNamed(context, 'prueba9');
                       break;
+                    case 9:
+                      Navigator.pushNamed(context, 'prueba10');
+                      break;
                     default:
                   }      
                 },
@@ -69,10 +72,12 @@ class _HomePageState extends State<HomePage> {
                               Text(_nombre(index),
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 18)
+                                      fontSize: 15)
                                   ),
                               SizedBox(height: 8.0),
-                              Text('Prueba Flutter')
+                              Text('Prueba Flutter', 
+                              style: TextStyle(fontSize: 10),
+                              )
                             ]))
                   ],
                 ),
@@ -116,6 +121,8 @@ class _HomePageState extends State<HomePage> {
       case 8: {  titulo = "FadeTransition"; } 
       break;
 
+      case 9: {  titulo = "Posi-Transition"; } 
+      break;
      
       default: { titulo = "Proximamente"; } 
       break; 
