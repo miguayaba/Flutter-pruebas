@@ -56,6 +56,9 @@ class _HomePageState extends State<HomePage> {
                     case 10:
                       Navigator.pushNamed(context, 'prueba11');
                       break;
+                    case 11:
+                      Navigator.pushNamed(context, 'prueba12');
+                      break;
                     default:
                   }      
                 },
@@ -127,7 +130,10 @@ class _HomePageState extends State<HomePage> {
       case 9: {  titulo = "Posi-Transition"; } 
       break;
 
-       case 10: {  titulo = "Rota-Transition"; } 
+      case 10: {  titulo = "Rota-Transition"; } 
+      break;
+
+      case 11: {  titulo = "ScaleTransition"; } 
       break;
      
       default: { titulo = "Proximamente"; } 
